@@ -35,6 +35,7 @@ double Length::nmile_to_km(double length_nmile)
 class Height
 {
 public:
+	int Height_selection;
 	double height_meter;
 	double height_feet;
 	double feet_to_meter(double height_feet);
