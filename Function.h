@@ -8,34 +8,34 @@ using namespace std;
 
 void Menu()
 {
-	std::cout << "**********************************" << std::endl;
-	std::cout << "| 1. Length(km and nMile)        |" << std::endl;
-	std::cout << "| 2. Height(Meter and Feet)      |" << std::endl;
-	std::cout << "| 3. Speed(km/h and kts)         |" << std::endl;
-	std::cout << "| 4. Temperature(C to F)         |" << std::endl;
-	std::cout << "| 5. Version_Info                |" << std::endl;
-	std::cout << "| 6. Manual                      |" << std::endl;
-	std::cout << "| 0. Exit                        |" << std::endl;
-	std::cout << "**********************************" << std::endl;
+	cout << "**********************************" << endl;
+	cout << "| 1. Length(km and nMile)        |" << endl;
+	cout << "| 2. Height(Meter and Feet)      |" << endl;
+	cout << "| 3. Speed(km/h and kts)         |" << endl;
+	cout << "| 4. Temperature(C to F)         |" << endl;
+	cout << "| 5. Version_Info                |" << endl;
+	cout << "| 6. Manual                      |" << endl;
+	cout << "| 0. Exit                        |" << endl;
+	cout << "**********************************" << endl;
 }
 
 void Version_Info()
 {
-	std::cout << "Version: V1.0" << std::endl;
+	cout << "Version: V1.0" << endl;
 }
 
 void Manual()
 {
-
+	cout << "114514 1919810" << endl;
 }
 
 void Length_cal_menu()
 {
-	std::cout << "**********************************" << std::endl;
-	std::cout << "| 1. Km to Nmile                 |" << std::endl;
-	std::cout << "| 2. Nmile to Km                 |" << std::endl;
-	std::cout << "| 0. Back                        |" << std::endl;
-	std::cout << "**********************************" << std::endl;
+	cout << "**********************************" << endl;
+	cout << "| 1. Km to Nmile                 |" << endl;
+	cout << "| 2. Nmile to Km                 |" << endl;
+	cout << "| 0. Back                        |" << endl;
+	cout << "**********************************" << endl;
 }
 
 void Length_cal()
