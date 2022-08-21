@@ -34,7 +34,8 @@ int main()
 			break;
 
 		case 3: //Speed(km/h and kts)  
-		
+			Speed_cal();
+			menu_flag = 1;
 			break;
 
 		case 4: //Temperature(C to F)  

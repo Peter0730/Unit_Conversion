@@ -2,7 +2,7 @@
 
 
 /***************************************/ 
-/*          Length Function            */
+/*               Length                */
 /***************************************/
 
 //Define the class of Length
@@ -30,7 +30,7 @@ double Length::nmile_to_km(double length_nmile)
 }
 
 /***************************************/
-/*          Height Function            */
+/*               Height                */
 /***************************************/
 class Height
 {
@@ -54,5 +54,28 @@ double Height::meter_to_feet(double height_meter)
 	return height_meter * 3.333333;
 }
 
+/***************************************/
+/*               Speed                 */
+/***************************************/
 
+//Define the class of Length
+class Speed
+{
+public:
+	int Speed_selection;
+	double Speed_Kph;
+	double Speed_Kts;
+	double Kph_to_Knots(double Speed_Kph);
+	double Knots_to_Kph(double Speed_Kts);
+};
 
+//Speed Trans Fuction
+double Speed::Kph_to_Knots(double Speed_Kph)
+{
+	return Speed_Kph*0.5399568;
+}
+
+double Speed::Knots_to_Kph(double Speed_Kts)
+{
+	return Speed_Kts/0.5399568;
+}

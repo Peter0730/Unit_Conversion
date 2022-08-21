@@ -19,6 +19,16 @@ void Menu()
 	std::cout << "**********************************" << std::endl;
 }
 
+void Version_Info()
+{
+	std::cout << "Version: V1.0" << std::endl;
+}
+
+void Manual()
+{
+
+}
+
 void Length_cal_menu()
 {
 	std::cout << "**********************************" << std::endl;
@@ -126,13 +136,53 @@ void Height_cal()
 	} while (Height_cal_menu_flag == 1);
 }
 
-
-void Version_Info()
+void Speed_cal_menu()
 {
-	std::cout << "Version: V1.0" << std::endl;
+	std::cout << "**********************************" << std::endl;
+	std::cout << "| 1. Kph to Knots                |" << std::endl;
+	std::cout << "| 2. Knots to Kph                |" << std::endl;
+	std::cout << "| 0. Back                        |" << std::endl;
+	std::cout << "**********************************" << std::endl;
 }
-
-void Manual()
+void Speed_cal()
 {
+	Speed Speed1;
+	double result;
+	int Speed_cal_menu_flag;
+	do {
+		Speed_cal_menu();
+		Speed_cal_menu_flag = 0;
+		cin >> Speed1.Speed_selection;
+		switch (Speed1.Speed_selection)
+		{
+		case 1: //Kph to Knots
+			cout << "Input the data of Speed(Kph)" << endl;
+			cin >> Speed1.Speed_Kph;
+			result = Speed1.Kph_to_Knots(Speed1.Speed_Kph);
+			cout << setiosflags(ios::fixed) << setprecision(2);
+			cout << "The result is:" << result << "" << "Knots" << endl;
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		case 2: //Knots to Kph
+			cout << "Input the data of Speed(Knots)" << endl;
+			cin >> Speed1.Speed_Kts;
+			result = Speed1.Knots_to_Kph(Speed1.Speed_Kts);
+			cout << setiosflags(ios::fixed) << setprecision(2);
+			cout << "The result is:" << result << "" << "Kph" << endl;
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		case 0:
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		default:
+			cout << "You input a wrong function No." << endl;
+			cout << "" << endl;
+			cout << "" << endl;
+			Speed_cal_menu_flag = 1;
+		}
 
+	} while (Speed_cal_menu_flag == 1);
 }
