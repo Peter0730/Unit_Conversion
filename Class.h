@@ -58,7 +58,7 @@ double Height::meter_to_feet(double height_meter)
 /*               Speed                 */
 /***************************************/
 
-//Define the class of Length
+//Define the class of Speed
 class Speed
 {
 public:
@@ -78,4 +78,30 @@ double Speed::Kph_to_Knots(double Speed_Kph)
 double Speed::Knots_to_Kph(double Speed_Kts)
 {
 	return Speed_Kts/0.5399568;
+}
+
+/***************************************/
+/*             Temperature             */
+/***************************************/
+
+//Define the class of Temperature
+class Temperature
+{
+public:
+	int Temp_selection;
+	double Temp_Celsius;
+	double Temp_Fahrenheit;
+	double Celsius_to_Fahrenheit(double Temp_Celsius);
+	double Fahrenheit_to_Celsius(double Temp_Fahrenheit);
+};
+
+//Temperature Trans Fuction
+double Temperature::Celsius_to_Fahrenheit(double Temp_Celsius)
+{
+	return Temp_Celsius*1.8+32;
+}
+
+double Temperature::Fahrenheit_to_Celsius(double Temp_Fahrenheit)
+{
+	return (Temp_Fahrenheit-32)/1.8;
 }

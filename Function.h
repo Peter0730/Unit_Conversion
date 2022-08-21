@@ -55,6 +55,7 @@ void Length_cal()
 			result = Length1.km_to_nmile(Length1.length_km);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "nMile" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -65,6 +66,7 @@ void Length_cal()
 			result = Length1.nmile_to_km(Length1.length_nmile);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "Km" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -110,6 +112,7 @@ void Height_cal()
 			result = Height1.meter_to_feet(Height1.height_meter);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "Ft" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -119,6 +122,7 @@ void Height_cal()
 			result = Height1.feet_to_meter(Height1.height_feet);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "M" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -161,6 +165,7 @@ void Speed_cal()
 			result = Speed1.Kph_to_Knots(Speed1.Speed_Kph);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "Knots" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -170,6 +175,7 @@ void Speed_cal()
 			result = Speed1.Knots_to_Kph(Speed1.Speed_Kts);
 			cout << setiosflags(ios::fixed) << setprecision(2);
 			cout << "The result is:" << result << "" << "Kph" << endl;
+			system("pause");
 			cout << "" << endl;
 			cout << "" << endl;
 			break;
@@ -185,4 +191,57 @@ void Speed_cal()
 		}
 
 	} while (Speed_cal_menu_flag == 1);
+}
+
+void Temp_cal_menu()
+{
+	std::cout << "**********************************" << std::endl;
+	std::cout << "| 1. C to F                      |" << std::endl;
+	std::cout << "| 2. F to C                      |" << std::endl;
+	std::cout << "| 0. Back                        |" << std::endl;
+	std::cout << "**********************************" << std::endl;
+}
+void Temp_cal()
+{
+	Temperature Temp1;
+	double result;
+	int Temp_cal_menu_flag;
+	do {
+		Temp_cal_menu();
+		Temp_cal_menu_flag = 0;
+		cin >> Temp1.Temp_selection;
+		switch (Temp1.Temp_selection)
+		{
+		case 1: //C to F
+			cout << "Input the data of Temperature(C)" << endl;
+			cin >> Temp1.Temp_Celsius;
+			result = Temp1.Celsius_to_Fahrenheit(Temp1.Temp_Celsius);
+			cout << setiosflags(ios::fixed) << setprecision(2);
+			cout << "The result is:" << result << "" << "F" << endl;
+			system("pause");
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		case 2: //F to C
+			cout << "Input the data of Temperature(F)" << endl;
+			cin >> Temp1.Temp_Fahrenheit;
+			result =Temp1.Fahrenheit_to_Celsius(Temp1.Temp_Fahrenheit);
+			cout << setiosflags(ios::fixed) << setprecision(2);
+			cout << "The result is:" << result << "" << "C" << endl;
+			system("pause");
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		case 0:
+			cout << "" << endl;
+			cout << "" << endl;
+			break;
+		default:
+			cout << "You input a wrong function No." << endl;
+			cout << "" << endl;
+			cout << "" << endl;
+			Temp_cal_menu_flag = 1;
+		}
+
+	} while (Temp_cal_menu_flag == 1);
 }

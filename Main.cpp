@@ -39,7 +39,8 @@ int main()
 			break;
 
 		case 4: //Temperature(C to F)  
-
+			Temp_cal();
+			menu_flag = 1;
 			break;
 	
 		case 5: //Version_Info
